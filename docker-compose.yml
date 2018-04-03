@@ -22,7 +22,7 @@ services:
     volumes_from:
       - app
     ports:
-      - 14000:80
+      - 8000:80
 
   # The Database
   database:
@@ -30,11 +30,11 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
     environment:
-      - "MYSQL_ROOT_PASSWORD=secret"
-      - "MYSQL_DATABASE=homestead"
-      - "MYSQL_USER=homestead"
+      - "MYSQL_ROOT_PASSWORD="
+      - "MYSQL_DATABASE="
+      - "MYSQL_USER="
     ports:
-        - "33061:3306"
+        - "3306:3306"
 
 volumes:
   dbdata:
